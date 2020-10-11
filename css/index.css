@@ -1,0 +1,166 @@
+.hero-img {
+  background-image: linear-gradient(rgba(57, 162, 198, 0.6),
+      rgba(152, 224, 249, 0.6)),
+    url(../images/img-background.jpg);
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  padding-top: 50px;
+  height: 100px;
+  width: 200px;
+}
+
+.hero-img h1 {
+  text-align: center;
+  font-size: 400%;
+  padding: 50px 100px;
+}
+
+.content-grid {
+  display: grid;
+  height: 100%;
+  grid-gap: 40px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: max-content;
+  background-color: #fff;
+  color: white;
+  margin: 100px;
+  grid-template-areas:
+    "one one one one one one one one two two two two"
+    "tee tee tee tee tee tee tee tee tee tee tee tee"
+    "for for for for for for fiv fiv fiv fiv fiv fiv";
+}
+
+.box {
+  border-radius: 10px;
+}
+
+.box h2 {
+  padding: 20px;
+  font-size: 150%;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+}
+
+.box p {
+  padding: 40px;
+}
+
+.one, .three, .four, .five p {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+}
+
+.one {
+  background-image: linear-gradient(to bottom right, rgba(40, 15, 15, 0.85),
+      rgba(157, 20, 20, 0.7)),
+  url(../images/element1.png);
+  background-position: center;
+  background-size: cover;
+  grid-area: one;
+}
+
+.one p {
+  font-size: 120%;
+}
+
+.two {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.7),
+      rgba(185, 238, 255, 0.7)),
+    url(../images/element2.jpg);
+  background-position: center;
+  color: black;
+  background-size: cover;
+  grid-area: two;
+  border: solid 3px black;
+}
+
+.two h2 {
+  text-shadow: none;
+  font-size: 160%;
+}
+
+.three {
+  background-image: linear-gradient(to bottom right,
+      rgba(9, 19, 23, 0.7), rgba(0, 146, 198, 1)),
+    url(../images/element3.jpg);
+  background-size: cover;
+  grid-area: tee;
+}
+
+.one h2, .three h2 {
+  font-size: 200%;
+}
+
+.four {
+  background-image: radial-gradient(rgba(46, 211, 255, 0.65),
+      rgba(5, 8, 15, 0.65)), url(../images/element4.jpg);
+  background-position: center;
+  background-size: cover;
+  grid-area: for;
+}
+
+.four, .five p {
+  font-size: 110%;
+}
+
+.five {
+  background-image: radial-gradient(rgba(101, 99, 99, 0.7), rgba(11, 11, 11, 0.7)),
+    url(../images/element5.png);
+  background-size: cover;
+  grid-area: fiv;
+  border: solid 3px black;
+}
+
+@media screen and (max-width: 800px) {
+  .content-grid {
+    height: 100%;
+    grid-gap: 0;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    margin: 0px;
+    grid-template-areas:
+      "one"
+      "two"
+      "tee"
+      "for"
+      "fiv";
+  }
+
+  .box {
+    border: 0;
+    border-radius: 0;
+  }
+
+  .box p {
+    padding: 40px;
+  }
+
+  .box h2 {
+    padding: 20px;
+  }
+
+  .logo {
+    height: 200px;
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .logo {
+    height: 500px;
+    width: 750px;
+  }
+
+  .hero-img h1 {
+    font-size: 200%;
+  }
+
+  .content-grid {
+    margin: 100px 500px;
+  }
+}
