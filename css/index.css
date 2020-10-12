@@ -18,7 +18,7 @@
 
 .hero-img h1 {
   text-align: center;
-  font-size: 400%;
+  font-size: 350%;
   padding: 50px 100px;
 }
 
@@ -158,6 +158,7 @@
 
   .hero-img h1 {
     font-size: 200%;
+
   }
 
   .content-grid {
